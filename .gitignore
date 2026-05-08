@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+**/.DS_Store
+._*
+__MACOSX/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Gurobi
+*.log
+gurobi.log

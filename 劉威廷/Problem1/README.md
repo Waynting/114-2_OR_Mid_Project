@@ -1,6 +1,6 @@
-# 作業研究期中專案 — 劉威廷的解答資料夾
+# 作業研究期中專案 — Problem 1
 
-本資料夾收錄期中專案各小題的程式、輸出與報告。目前已完成 **Problem 1**。
+本資料夾收錄 **Problem 1**(用 Gurobi 解 instance 5)的程式、輸出與報告。
 
 ---
 
@@ -42,8 +42,9 @@ python -c "import gurobipy; print(gurobipy.gurobi.version())"
 | `problem1_solve.py` | Problem 1 的 MIP 模型與求解程式 |
 | `problem1_solution.txt` | 求解後的純文字 + JSON 摘要(訂單分派、搬車路線) |
 | `problem1_report.md` | **要交出去的業務語言報告**(營運主管能直接讀懂) |
-| `OR114-2_期中專案_問題解釋.md` | 個人對題目的中文整理 |
 | `README.md` | 你正在看的這份檔案 |
+
+題目解釋整理放在上一層的 `../OR114-2_期中專案_問題解釋.md`。
 
 ---
 
@@ -52,13 +53,13 @@ python -c "import gurobipy; print(gurobipy.gurobi.version())"
 從專案根目錄(或任何位置)執行:
 
 ```bash
-/Users/waynliu/.venvs/OR/bin/python "/Users/waynliu/Documents/NTU/台大/大二下/OR/114-2_OR_Mid_Project/劉威廷/problem1_solve.py"
+/Users/waynliu/.venvs/OR/bin/python "/Users/waynliu/Documents/NTU/台大/大二下/OR/114-2_OR_Mid_Project/劉威廷/Problem1/problem1_solve.py"
 ```
 
 或先 `cd` 進來再跑:
 
 ```bash
-cd "/Users/waynliu/Documents/NTU/台大/大二下/OR/114-2_OR_Mid_Project/劉威廷"
+cd "/Users/waynliu/Documents/NTU/台大/大二下/OR/114-2_OR_Mid_Project/劉威廷/Problem1"
 /Users/waynliu/.venvs/OR/bin/python problem1_solve.py
 ```
 
@@ -96,11 +97,3 @@ Material_from_cool/OR114-2_midtermProject_data/data/instance05.txt
 - 目標:`max  Σ R_k·y_k − Σ 2R_k·(1−y_k)`
 
 詳細推導與報告內容請看 `problem1_report.md`。
-
----
-
-## 待完成
-
-- [ ] Problem 2(啟發式演算法)
-- [ ] Problem 3(演算法說明 + big-O 分析)
-- [ ] Problem 4(隨機 instance 實驗)
