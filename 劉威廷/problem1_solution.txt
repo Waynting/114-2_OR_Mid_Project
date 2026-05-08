@@ -1,0 +1,223 @@
+# Problem 1 — IEDO car-rental relocation+upgrade plan
+# Instance: instance05.txt
+# Optimal objective (profit): 106800.00
+# Revenue earned (accepted): 117000.00
+# Compensation paid (rejected x 2): 10200.00
+# Net profit = revenue - compensation = 106800.00
+# Relocation budget B = 1200 min, used = 1080 min
+
+# JSON summary follows:
+{
+  "instance": "instance05.txt",
+  "objective_value": 106800.0,
+  "revenue_total": 122100.0,
+  "revenue_accepted": 117000.0,
+  "compensation_paid": 10200.0,
+  "B_minutes_budget": 1200,
+  "B_minutes_used": 1080,
+  "accepted_orders": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "rejected_orders": [
+    1,
+    2
+  ],
+  "served_by": {
+    "4": 1,
+    "10": 2,
+    "3": 3,
+    "9": 4,
+    "6": 4,
+    "7": 5,
+    "5": 6,
+    "8": 6
+  },
+  "upgraded": {
+    "3": false,
+    "4": false,
+    "5": false,
+    "6": true,
+    "7": false,
+    "8": false,
+    "9": false,
+    "10": false
+  },
+  "car_routes": {
+    "1": [
+      4
+    ],
+    "2": [
+      10
+    ],
+    "3": [
+      3
+    ],
+    "4": [
+      9,
+      6
+    ],
+    "5": [
+      7
+    ],
+    "6": [
+      5,
+      8
+    ]
+  },
+  "relocations": [
+    {
+      "car": 2,
+      "from_station": 2,
+      "to_station": 4,
+      "depart_minute": 90,
+      "arrive_minute": 330,
+      "duration": 240,
+      "context": "initial position -> serve order 10",
+      "depart_time": "2023/01/01 01:30",
+      "arrive_time": "2023/01/01 05:30"
+    },
+    {
+      "car": 3,
+      "from_station": 3,
+      "to_station": 5,
+      "depart_minute": 1410,
+      "arrive_minute": 1620,
+      "duration": 210,
+      "context": "initial position -> serve order 3",
+      "depart_time": "2023/01/01 23:30",
+      "arrive_time": "2023/01/02 03:00"
+    },
+    {
+      "car": 4,
+      "from_station": 5,
+      "to_station": 3,
+      "depart_minute": 930,
+      "arrive_minute": 1140,
+      "duration": 210,
+      "context": "initial position -> serve order 9",
+      "depart_time": "2023/01/01 15:30",
+      "arrive_time": "2023/01/01 19:00"
+    },
+    {
+      "car": 4,
+      "from_station": 4,
+      "to_station": 3,
+      "depart_minute": 5490,
+      "arrive_minute": 5670,
+      "duration": 180,
+      "context": "after order 9 -> serve order 6",
+      "depart_time": "2023/01/04 19:30",
+      "arrive_time": "2023/01/04 22:30"
+    },
+    {
+      "car": 5,
+      "from_station": 4,
+      "to_station": 2,
+      "depart_minute": 1380,
+      "arrive_minute": 1620,
+      "duration": 240,
+      "context": "initial position -> serve order 7",
+      "depart_time": "2023/01/01 23:00",
+      "arrive_time": "2023/01/02 03:00"
+    }
+  ],
+  "orders": [
+    {
+      "kid": 1,
+      "level": 1,
+      "pickup_station": 1,
+      "return_station": 6,
+      "pickup_time": "2023/01/04 01:00",
+      "return_time": "2023/01/04 20:00",
+      "revenue": 1900.0
+    },
+    {
+      "kid": 2,
+      "level": 1,
+      "pickup_station": 4,
+      "return_station": 5,
+      "pickup_time": "2023/01/01 16:00",
+      "return_time": "2023/01/03 00:00",
+      "revenue": 3200.0
+    },
+    {
+      "kid": 3,
+      "level": 1,
+      "pickup_station": 5,
+      "return_station": 1,
+      "pickup_time": "2023/01/02 03:30",
+      "return_time": "2023/01/04 11:30",
+      "revenue": 5600.0
+    },
+    {
+      "kid": 4,
+      "level": 1,
+      "pickup_station": 1,
+      "return_station": 2,
+      "pickup_time": "2023/01/03 12:00",
+      "return_time": "2023/01/05 15:00",
+      "revenue": 5100.0
+    },
+    {
+      "kid": 5,
+      "level": 2,
+      "pickup_station": 6,
+      "return_station": 6,
+      "pickup_time": "2023/01/01 00:00",
+      "return_time": "2023/01/04 20:00",
+      "revenue": 36800.0
+    },
+    {
+      "kid": 6,
+      "level": 1,
+      "pickup_station": 3,
+      "return_station": 4,
+      "pickup_time": "2023/01/04 23:00",
+      "return_time": "2023/01/05 14:00",
+      "revenue": 1500.0
+    },
+    {
+      "kid": 7,
+      "level": 2,
+      "pickup_station": 2,
+      "return_station": 1,
+      "pickup_time": "2023/01/02 03:30",
+      "return_time": "2023/01/04 23:30",
+      "revenue": 27200.0
+    },
+    {
+      "kid": 8,
+      "level": 2,
+      "pickup_station": 6,
+      "return_station": 6,
+      "pickup_time": "2023/01/05 04:30",
+      "return_time": "2023/01/05 14:30",
+      "revenue": 4000.0
+    },
+    {
+      "kid": 9,
+      "level": 2,
+      "pickup_station": 3,
+      "return_station": 4,
+      "pickup_time": "2023/01/01 19:30",
+      "return_time": "2023/01/04 15:30",
+      "revenue": 27200.0
+    },
+    {
+      "kid": 10,
+      "level": 1,
+      "pickup_station": 4,
+      "return_station": 2,
+      "pickup_time": "2023/01/01 06:00",
+      "return_time": "2023/01/05 06:00",
+      "revenue": 9600.0
+    }
+  ]
+}
