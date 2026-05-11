@@ -19,3 +19,6 @@ venv/
 # Gurobi
 *.log
 gurobi.log
+
+# Claude Code
+.claude/
