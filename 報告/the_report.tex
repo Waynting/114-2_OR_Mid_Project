@@ -70,11 +70,11 @@ We formulate the planning problem as a per-car path-flow MILP on a time-feasibil
 \subsection{Feasibility-filtered index sets}
 
 \begin{align*}
-\mathcal{V}^{\text{src}} &= \bigl\{ (c,k)\in C\times K : \mathrm{lvl}(c,k),\;\; T_{s^0_c,\,s^p_k}\le t^p_k - \Delta\bigr\}, \\
+\mathcal{V}^{\text{src}} &= \bigl\{ (c,k)\in C\times K : \mathrm{lvl}(c,k),\;\; T_{s^0_c,\,s^p_k}\le \max(0,\;t^p_k - \Delta)\bigr\}, \\
 \mathcal{V}^{\text{chn}} &= \bigl\{ (c,i,j)\in C\times K\times K : i\ne j,\; \mathrm{lvl}(c,i),\; \mathrm{lvl}(c,j),\;\; t^r_i + \Theta + T_{s^r_i,\,s^p_j} \le t^p_j - \Delta\bigr\}, \\
 \mathcal{V}^{\text{snk}} &= \bigl\{ (c,k)\in C\times K : \mathrm{lvl}(c,k)\bigr\}.
 \end{align*}
-Restricting variables to these sparse sets dramatically reduces model size and is enough to encode every operational rule: source feasibility encodes the initial-position lead-time constraint; chain feasibility encodes the cleaning, ready-buffer, relocation, and lead-time rules in one inequality.
+Restricting variables to these sparse sets dramatically reduces model size and is enough to encode every operational rule: source feasibility encodes the initial-position lead-time constraint (with the $\max(0,\,\cdot)$ accounting for the problem's assumption that all cars are ready at the origin and may be picked up immediately at $t=0$ from their home station, in which case the $\Delta$ lead-time is waived); chain feasibility encodes the cleaning, ready-buffer, relocation, and lead-time rules in one inequality.
 
 \subsection{Decision variables}
 
